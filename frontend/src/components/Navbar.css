@@ -1,0 +1,51 @@
+/* Navbar container */
+.navbar {
+  background-color: #4b7bec;
+  padding: 15px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* App title (Loan Management System) */
+.navbar-title {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Navbar link */
+.navbar-link {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 15px;
+  transition: color 0.3s ease;
+}
+
+/* Navbar link hover effect */
+.navbar-link:hover {
+  color: #3867d6;
+}
+
+/* Navbar button */
+.navbar-button {
+  background-color: #ff7e5f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Navbar button hover effect */
+.navbar-button:hover {
+  background-color: #feb47b;
+}

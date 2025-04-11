@@ -1,0 +1,94 @@
+/* Overall container styling */
+.dashboard-container {
+  padding: 40px 20px; /* Reduced padding */
+  text-align: center;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  min-height: 80vh; /* Reduced min-height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Title Styling */
+.dashboard-title {
+  font-size: 28px; /* Slightly smaller font size */
+  margin-bottom: 30px; /* Reduced margin */
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px; /* Slightly reduced letter spacing */
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Grid layout for cards */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Further reduced min card width */
+  gap: 15px; /* Reduced gap between cards */
+  max-width: 800px; /* Reduced max-width */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Styling for each card */
+.dashboard-card {
+  background: #ffffff;
+  color: #333;
+  padding: 15px; /* Further reduced padding */
+  border-radius: 12px; /* Slightly reduced border radius */
+  text-decoration: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Reduced box shadow */
+  transition: all 0.3s ease;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 150px; /* Reduced card height */
+  text-align: center;
+}
+
+/* Hover effects for cards */
+.dashboard-card:hover {
+  transform: translateY(-4px); /* Reduced hover lift */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #f3a183, #fcd2b3);
+}
+
+/* Card Title */
+.dashboard-card h3 {
+  font-size: 18px; /* Reduced font size */
+  font-weight: 600;
+  color: #2d3436;
+  margin-bottom: 10px; /* Reduced margin */
+}
+
+/* Card description or content */
+.dashboard-card p {
+  font-size: 12px; /* Reduced font size */
+  font-weight: 400;
+  color: #636e72;
+  margin: 0;
+}
+
+/* Button styling within cards */
+.dashboard-card button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 6px 14px; /* Reduced padding */
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px; /* Smaller button font size */
+  font-weight: 500;
+  margin-top: 10px; /* Reduced margin */
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-card button:hover {
+  background-color: #388e3c;
+}
+
+/* Removed emoji styling */
