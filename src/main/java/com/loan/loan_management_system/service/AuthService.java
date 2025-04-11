@@ -37,19 +37,25 @@ public class AuthService {
             return new AuthResponse(null, "Username already exists");
         }
 
-        Role userRole = roleRepo.findByName("ROLE_USER")
-                .orElseThrow(() -> new RuntimeException("Default ROLE_USER not found"));
+        String roleName = request.getRole() != null ? request.getRole().toUpperCase() : "ROLE_USER";
+        if (!roleName.startsWith("ROLE_")) {
+            roleName = "ROLE_" + roleName;
+        }
+
+        Role role = roleRepo.findByName(roleName)
+                .orElseThrow(() -> new RuntimeException("Role  not found"));
 
         User newUser = new User();
         newUser.setUsername(request.getUsername());
         newUser.setEmail(request.getEmail());
         newUser.setPassword(passwordEncoder.encode(request.getPassword()));
-        newUser.setRole(userRole);
+        newUser.setRole(role);
 
         userRepo.save(newUser);
 
-        return new AuthResponse(null, "User registered successfully");
+        return new AuthResponse(null, "User registered successfully as " + roleName);
     }
+
 
     public AuthResponse login(LoginRequest request) {
         System.out.println("LOGIN REQUEST: " + request.getUsername() + " / " + request.getPassword());

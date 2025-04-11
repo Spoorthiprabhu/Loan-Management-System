@@ -23,16 +23,20 @@ public class JwtUtil {
     private long expiration;
 
     public String generateToken(UserDetails userDetails) {
+        String role = userDetails.getAuthorities().stream()
+            .map(GrantedAuthority::getAuthority)
+            .findFirst()
+            .orElse("ROLE_USER"); // fallback
+
         return Jwts.builder()
                 .setSubject(userDetails.getUsername())
-                .claim("roles", userDetails.getAuthorities().stream()
-                    .map(GrantedAuthority::getAuthority)
-                    .collect(Collectors.joining(",")))
+                .claim("role", role) // ✅ include role as claim
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + expiration))
                 .signWith(SignatureAlgorithm.HS512, secret)
                 .compact();
     }
+
 
 
 
