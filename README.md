@@ -26,10 +26,13 @@ Welcome to the **Loan Management System**, a comprehensive web-based solution de
 
 ## 🛠 Tech Stack
 
-- **Frontend**: HTML5, CSS3, Bootstrap
-- **Backend**: ASP.NET MVC 5 (C#)
-- **Database**: SQL Server 2019
-- **IDE**: Visual Studio 2019
+Frontend: HTML5, CSS3, Bootstrap 5
+
+Backend: Java, Spring Boot (using Spring Tool Suite - STS)
+
+Database: MySQL
+
+IDE: Spring Tool Suite (STS)
 
 ---
 
